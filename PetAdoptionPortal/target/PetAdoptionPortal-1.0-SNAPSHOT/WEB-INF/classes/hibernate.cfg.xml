@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost/petbookdb</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">parv1234</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.show_sql">true</property>
+    
+   <mapping resource="admin.hbm.xml"/>
+   <mapping resource="user.hbm.xml"/>
+   <mapping resource="petAdvertisement.hbm.xml"/>
+   <mapping resource="category.hbm.xml"/>
+    
+    
+  </session-factory>
+</hibernate-configuration>

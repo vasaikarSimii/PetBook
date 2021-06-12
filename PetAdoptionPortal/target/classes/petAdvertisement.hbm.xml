@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<hibernate-mapping>
+  <class name="com.mycompany.Pojo.PetAdvertisement" table="petad">
+    <id column="pet_id" name="pet_id" type="long">
+      <generator class="native"/>
+    </id>
+    <property column="petname" name="petname" type="string"/>
+    <property column="petage" name="petage" type="string"/>
+    <property column="petgender" name="petgender" type="string"/>
+    <property column="numberofvaccines" name="numberofvaccines" type="string"/>
+    <property column="petvetname" name="petvetname" type="string"/>
+    <property column="levelofactiveness" name="levelofactiveness" type="string"/>
+    <property column="microchip" name="microchip" type="string"/>
+    
+    <many-to-one class="com.mycompany.Pojo.User" column="user" foreign-key="fk_advert_user" name="user" not-null="true"/>
+    
+  </class>
+</hibernate-mapping>

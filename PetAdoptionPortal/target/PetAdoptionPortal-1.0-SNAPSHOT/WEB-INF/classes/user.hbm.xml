@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.mycompany.Pojo.User" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="user">
+    <id name="user_id" type="long">
+      <column name="user_id"/>
+      <generator class="native"/>
+    </id>
+    <property name="firstname" type="java.lang.String">
+      <column name="firstname"/>
+    </property>
+    <property name="lastname" type="java.lang.String">
+      <column name="lastname"/>
+    </property>
+    <property name="gender" type="java.lang.String">
+      <column name="gender"/>
+    </property>
+    <property name="age" type="java.lang.String">
+      <column name="age"/>
+    </property>
+    <property name="email" type="java.lang.String">
+      <column name="email"/>
+    </property>
+    <property name="phone" type="java.lang.String">
+      <column name="phone"/>
+    </property>
+    <property name="username" type="java.lang.String">
+      <column name="username"/>
+    </property>
+    <property name="password" type="java.lang.String">
+      <column name="password"/>
+    </property>
+  </class>
+</hibernate-mapping>
